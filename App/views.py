@@ -7,7 +7,7 @@ from .forms import CandidateForm
 # READ
 def data_read(request):
     context = {'data_read':Candidate.objects.all()}
-    return render(request, "data-read.html", context)
+    return render(request, "data_read.html", context)
 
 # CREATE / UPDATE
 def data_form (request, id = None):

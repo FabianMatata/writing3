@@ -17,7 +17,7 @@ class CandidateForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        super(CandidateForm, self).__init__(**args, **kwargs)
+        super(CandidateForm, self).__init__(*args, **kwargs)
         self.fields['gender'].choices = [
             ("", "Select a gender"),] + list(self.fields['gender'].choices)[1:]
         self.fields['career'].empty_label = "Select an option"

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 <!--navbar-->
-{% block nav-btn %}
+<!-- {% block nav-btn %}
 <a href="{% url 'data_create' %}" id="btn-nav" class="btn btn-outline-light">Go Home</a>
-{% endblock nav-btn %}
+{% endblock nav-btn %} -->
 
 
 <!--page content-->
@@ -22,7 +22,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for data in data_read %}
+            {% for data in data.read %}
             <tr>
                 <td>{{ data.name }}</td>
                 <td>{{ data.phone }}</td>
@@ -46,5 +46,6 @@
         </tbody>
     </table>
 </div>
-{% endlock content %}
+
+{% endblock content %}
 

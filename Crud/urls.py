@@ -1,10 +1,12 @@
-from django.conf.urls import include, path
+# from django.conf.urls import include, path
 from django.contrib import admin
 from App import views
 
+from django.urls import include, path
+
 urlpatterns = [
-    path('^admin/', admin.site.urls),
-    path('', include('account.urls')),
+    path('admin/', admin.site.urls),
+    # path('', include('account.urls')),
     # C (CREATE)
     path('', views.data_form, name='data_create'),
     # R (READ)
