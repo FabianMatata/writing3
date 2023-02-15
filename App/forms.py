@@ -6,14 +6,14 @@ class CandidateForm(forms.ModelForm):
         model = Candidate
         fields = ('name', 'phone', 'email', 'gender', 'career')
         labels = {
-            'name': 'Name',
-            'email': 'Email',
+            'name':'Name',
+            'email':'Email',
         }
 # Placeholder
         widget = {
-            'name': forms.TimeInput(attrs={'placeholder': 'Your name'}),
-            'phone': forms.TimeInput(attrs={'placeholder': 'Your phone'}),
-            'email': forms.TimeInput(attrs={'placeholder': 'Your email'}),
+            'name': forms.TextInput(attrs={'placeholder': 'Your name'}),
+            'phone': forms.TextInput(attrs={'placeholder': 'Your phone'}),
+            'email': forms.TextInput(attrs={'placeholder': 'Your email'}),
         }
 
     def __init__(self, *args, **kwargs):
